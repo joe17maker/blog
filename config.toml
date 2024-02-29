@@ -1,0 +1,224 @@
+baseURL = "http://joe17maker.github.io/"
+# [en, zh-cn, fr, ...] 设置默认的语言
+defaultContentLanguage = "zh-cn"
+# 网站语言, 仅在这里 CN 大写
+languageCode = "zh-CN"
+# 是否包括中日韩文字
+hasCJKLanguage = true
+# 网站标题
+title = "Joe的个人博客"
+
+# 更改使用 Hugo 构建网站时使用的默认主题
+theme = "DoIt"
+
+
+enableEmoji = true
+[params]
+  # DoIt 主题版本
+  version = "0.3.X"
+  title = "Joe的个人博客"
+  # 日期格式
+  dateFormat = "2006-01-02"
+  defaultTheme = "auto"
+  images = ["/images/avatar.webp"]
+
+[params.home.profile]
+  # Gravatar 邮箱, 用于优先在主页显示的头像
+  gravatarEmail = ""
+  # 主页显示头像的 URL
+  avatarURL = "/logo.jpg"
+  # 头像的链接指向的 URL
+  avatarLinkURL = ""
+  typeit = false
+  subtitle = "Be water, my friend"
+  social = true
+
+[params.social]
+  Angellist = ""
+  Bandcamp = ""
+  Behance = ""
+#  Bilibili = "xxxx"
+  Bitbucket = ""
+  BuyMeACoffee = ""
+  Codepen = ""
+  Deviantart = ""
+  Devto = ""
+  Douban = ""
+  Dribbble = ""
+#  Email = "xxxx@xxxx.com"
+  Facebook = ""
+  Fivehundredpx = ""
+  Flickr = ""
+  Foursquare = ""
+  FreeCodeCamp = ""
+  Gitea = ""
+#  GitHub = "joe17maker"
+  Gitlab = ""
+  Goodreads = ""
+  Googlescholar = ""
+  Hackernews = ""
+  Instagram = ""
+  Jsfiddle = ""
+  Keybase = ""
+  Kickstarter = ""
+  Ko-Fi = ""
+  Lastfm = ""
+  Liberapay = ""
+  Linkedin = ""
+  Linktree = ""
+  Mastodon = ""
+  Matrix = ""
+  Medium = ""
+  Mix = ""
+  Odnoklassniki = ""
+  ORCID = ""
+  Patreon = ""
+  Paypal = ""
+  Pinterest = ""
+  QQ = ""
+  QQGroup = ""
+  Quora = ""
+  Reddit = ""
+  Researchgate = ""
+  RSS = false
+  Skype = ""
+  Slidershare = ""
+  Snapchat = ""
+  Soundcloud = ""
+  Spotify = ""
+  Stackoverflow = ""
+#  Steam = "76561198986667517"
+  Strava = ""
+  Telegram = ""
+  Thingiverse = ""
+  Tumblr = ""
+  Twitch = ""
+  Twitter = ""
+  Vine = ""
+  VK = ""
+  Weibo = ""
+  Whatsapp = ""
+  Wordpress = ""
+  Xing = ""
+  XMPP = ""
+  Youtubechannel = ""
+  Youtubecustom = ""
+  Youtubelegacy = ""
+#  Zhihu = "xxxx"
+#  [social.Diaspora]
+#   id = "@xxxx"
+#  prefix = "https://yyyy/"
+
+[params.header.title]
+    # LOGO 的 URL
+    logo = ""
+    # 标题名称
+    name = "JOE"
+    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+    pre = "<i class='far fa-edit fa-fw'></i>"
+    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+    post = ""
+    typeit = true
+
+
+[params.page.toc]
+    enable = true
+    keepStatic = false
+    auto = true
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+    pre = ""
+    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+    post = ""
+    name = "文章"
+    url = "/posts/"
+    # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "标签"
+    url = "/tags/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "分类"
+    url = "/categories/"
+    title = ""
+    weight = 3
+
+# Hugo 解析文档的配置
+[markup]
+  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params.search]
+  enable = true
+  # 搜索引擎的类型 ("algolia", "fuse")
+  type = "fuse"
+  # 文章内容最长索引长度
+  contentLength = 4000
+  # 搜索框的占位提示语
+  placeholder = ""
+  maxResultLength = 10
+
+  snippetLength = 50
+
+  highlightTag = "em"
+
+  absoluteURL = false
+  [params.search.algolia]
+    index = ""
+    appID = ""
+    searchKey = ""
+  [params.search.fuse]
+    isCaseSensitive = false
+    minMatchCharLength = 2
+    findAllMatches = false
+    location = 0
+    threshold = 0.3
+    distance = 100
+    ignoreLocation = false
+    useExtendedSearch = false
+    ignoreFieldNorm = false
+
+[params.typeit]
+  # typing speed between each step (measured in milliseconds)
+  # 每一步的打字速度 (单位是毫秒)
+  speed = 100
+  # blinking speed of the cursor (measured in milliseconds)
+  # 光标的闪烁速度 (单位是毫秒)
+  cursorSpeed = 1000
+  # character used for the cursor (HTML format is supported)
+  # 光标的字符 (支持 HTML 格式)
+  cursorChar = "|"
+  # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
+  # 打字结束之后光标的持续时间 (单位是毫秒, "-1" 代表无限大)
+  duration = -1
+[author]
+  name = "Joe"
+  email = ""
+  link = ""
+  avatar = ""
+  gravatarEmail = ""
+[taxonomies]
+    author = "authors"
+    category = "categories"
+    tag = "tags"
+    series = "series"
+[server]
+ port = 9848
